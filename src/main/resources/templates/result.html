@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru"/>
+<head>
+    <meta charset="UTF-8"/>
+    <title>URLShortener</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+    <style>
+        .result {
+            margin: auto;
+        }
+        .success {
+            padding: 10px;
+            width: 50%;
+            margin: auto;
+        }
+        #result-input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="text-center">
+    <div class="page-header success">
+        <div class="alert alert-success" role="alert">
+            <strong>Ссылка уменьшена!</strong>
+        </div>
+    </div>
+    <p>Короткая ссылка - <a id="old-link" th:href="${link}" th:text="${keyed} + ${link}"></a></p>
+    <div class="col-lg-6 result">
+    </div>
+</div>
+</body>
+</html>
